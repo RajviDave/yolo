@@ -2,17 +2,19 @@ from ultralytics import YOLO
 import cv2
 import math 
 
-cap = cv2.VideoCapture(0)
-cap.set(3, 640)
-cap.set(4, 480)
+cape = cv2.VideoCapture(0)
+cape.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+cape.set(cv2.CAP_PROP_FRAME_HEIGHT, 640)
 
 model=YOLO("yolo-Weights/yolov8n.pt")
 
 classNames=["person","bicycle","cell phone"]
 
-# while  True:
-#     success, img = cap.read()
-#     results = model(img,stream=True)
+while  True:
+    success, img = cape.read()
+    results = model(img,stream=True)
+
+    print(len(img))
 
 #     # coordinates
 #     for r in results:
