@@ -20,8 +20,7 @@ while  True:
 
 #         for box in boxes:
 #             # bounding box
-#             x1, y1, x2
-# , y2 = box.xyxy[0]
+#             x1, y1, x2, y2 = box.xyxy[0]
 #             x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2) # convert to int values
 
 #             # put box in cam
